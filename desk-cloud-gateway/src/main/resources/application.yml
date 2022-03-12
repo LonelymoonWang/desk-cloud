@@ -1,0 +1,22 @@
+#bootstrap.yml 是系统级别的，加载优先级高于 application.yml ，负责从外部加载配置并解析
+server:
+  port: 3355 #端口号
+spring:
+  config:
+    import: "optional:configserver:http://desk-cloud-config-server"
+  application:
+    name: desk-cloud-gateway #服务名
+  cloud:
+    config:
+      label: master #分支名称
+      name: desk-cloud-gateway  #配置文件名称，desk-cloud-gateway-dev.yml 中的 config
+      profile: dev  #环境名  desk-cloud-gateway-dev.yml 中的 dev
+      #这里不要忘记添加 http:// 否则无法读取
+      uri: http://localhost:3344 #Spring Cloud Config 服务端（配置中心）地址
+      discovery:
+        enabled: true
+        service-id: desk-cloud-config-server
+eureka:
+  client: #将客户端注册到 eureka 服务列表内
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
