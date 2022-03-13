@@ -1,0 +1,68 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'wang.lonelymoon'
+version '1.0-SNAPSHOT'
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            //如果是war包填写components.web，如果是jar包填写components.java
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            //指定要上传的maven私服仓库
+            def releasesRepoUrl = "https://packages.aliyun.com/maven/repository/2177549-release-4yB8m6/"
+            def snapshotsRepoUrl = "https://packages.aliyun.com/maven/repository/2177549-snapshot-tKRepq/"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            //认证用户和密码
+            credentials {
+                username = project.properties['username']
+                password = project.properties['password']
+            }
+        }
+    }
+}
+
+repositories {
+    maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    maven {
+        url 'https://maven.aliyun.com/repository/spring/'
+    }
+    maven {
+        credentials {
+            username = project.properties['username']
+            password = project.properties['password']
+        }
+        url 'https://packages.aliyun.com/maven/repository/2177549-release-4yB8m6/'
+    }
+    maven {
+        credentials {
+            username = project.properties['username']
+            password = project.properties['password']
+        }
+        url 'https://packages.aliyun.com/maven/repository/2177549-snapshot-tKRepq/'
+    }
+    mavenCentral()
+}
+
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
