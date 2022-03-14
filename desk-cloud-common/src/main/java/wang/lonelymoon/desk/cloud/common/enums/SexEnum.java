@@ -8,7 +8,7 @@ public enum SexEnum {
     /**
      * MAN 男 WOMAN 女 UNKNOWN 未知
      */
-    MAN(1,"男"),WOMAN(2,"女"),UNKNOWN(3,"未知");
+    MAN(1, "男"), WOMAN(2, "女"), UNKNOWN(3, "未知");
 
     private Integer code;
     private String desc;

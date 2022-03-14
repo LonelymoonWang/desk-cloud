@@ -8,11 +8,19 @@ public enum UserTypeEnum {
     /**
      * NORMAL 普通
      */
-    NORMAL(1,"普通");
+    NORMAL(1, "普通");
 
 
     private Integer code;
     private String desc;
+
+    UserTypeEnum(Integer code, String desc) {
+        this.code = code;
+        this.desc = desc;
+    }
+
+    UserTypeEnum() {
+    }
 
     public Integer getCode() {
         return code;
@@ -28,15 +36,6 @@ public enum UserTypeEnum {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-
-    UserTypeEnum(Integer code, String desc) {
-        this.code = code;
-        this.desc = desc;
-    }
-
-    UserTypeEnum() {
     }
 
     @Override

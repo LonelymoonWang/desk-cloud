@@ -8,10 +8,18 @@ public enum LoginAccountStatusEnum {
     /**
      * NORMAL 正常 LOCKED 封禁
      */
-    NORMAL(1,"正常"),LOCKED(2,"封禁");
+    NORMAL(1, "正常"), LOCKED(2, "封禁");
 
     private Integer code;
     private String desc;
+
+    LoginAccountStatusEnum(Integer code, String desc) {
+        this.code = code;
+        this.desc = desc;
+    }
+
+    LoginAccountStatusEnum() {
+    }
 
     public Integer getCode() {
         return code;
@@ -27,14 +35,6 @@ public enum LoginAccountStatusEnum {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    LoginAccountStatusEnum(Integer code, String desc) {
-        this.code = code;
-        this.desc = desc;
-    }
-
-    LoginAccountStatusEnum() {
     }
 
     @Override

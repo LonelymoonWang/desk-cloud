@@ -1,9 +1,8 @@
 package wang.lonelymoon.desk.cloud.modules.system;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author lonelymoon
@@ -17,7 +16,7 @@ public class DeskCloudModulesSystemApplication {
     }
 
     @RequestMapping
-    public String getStr(){
+    public String getStr() {
         return "Hello";
     }
 }

@@ -8,10 +8,18 @@ public enum DelFlagEnum {
     /**
      * DEL 删除 NOT_DEL 未删除
      */
-    DEL(0,"删除"),NOT_DEL(1,"未删除");
+    DEL(0, "删除"), NOT_DEL(1, "未删除");
 
     private Integer code;
     private String desc;
+
+    DelFlagEnum(Integer code, String desc) {
+        this.code = code;
+        this.desc = desc;
+    }
+
+    DelFlagEnum() {
+    }
 
     public Integer getCode() {
         return code;
@@ -27,14 +35,6 @@ public enum DelFlagEnum {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    DelFlagEnum(Integer code, String desc) {
-        this.code = code;
-        this.desc = desc;
-    }
-
-    DelFlagEnum() {
     }
 
     @Override

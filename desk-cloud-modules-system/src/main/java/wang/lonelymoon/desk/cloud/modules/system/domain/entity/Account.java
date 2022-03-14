@@ -1,14 +1,15 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 
-import lombok.Data;
+import lombok.*;
 import wang.lonelymoon.desk.cloud.common.enums.*;
 
 import javax.persistence.*;
 
-import static javax.persistence.EnumType.STRING;
+import static javax.persistence.EnumType.*;
 
 /**
  * 账户表
+ *
  * @author lonelymoon
  */
 @Data

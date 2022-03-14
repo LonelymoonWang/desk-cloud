@@ -2,13 +2,14 @@ package wang.lonelymoon.desk.cloud.common.enums;
 
 /**
  * 登录账号类型
+ *
  * @author lonelymoon
  */
 public enum LoginAccountTypeEnum {
     /**
      * ADMIN 管理员 NORMAL 普通用户
      */
-    ADMIN(1,"管理员"),NORMAL(2,"普通用户");
+    ADMIN(1, "管理员"), NORMAL(2, "普通用户");
 
 
     private Integer code;

@@ -8,10 +8,18 @@ public enum UserStatusEnum {
     /**
      * USING 使用中
      */
-    USING(1,"使用中"),DISABLE(2,"停用");
+    USING(1, "使用中"), DISABLE(2, "停用");
 
     private Integer code;
     private String desc;
+
+    UserStatusEnum(Integer code, String desc) {
+        this.code = code;
+        this.desc = desc;
+    }
+
+    UserStatusEnum() {
+    }
 
     public Integer getCode() {
         return code;
@@ -27,14 +35,6 @@ public enum UserStatusEnum {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    UserStatusEnum(Integer code, String desc) {
-        this.code = code;
-        this.desc = desc;
-    }
-
-    UserStatusEnum() {
     }
 
     @Override
