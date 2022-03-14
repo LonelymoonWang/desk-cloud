@@ -3,13 +3,11 @@ package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import wang.lonelymoon.desk.cloud.common.enums.SexEnum;
+import wang.lonelymoon.desk.cloud.common.enums.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
+import static javax.persistence.EnumType.STRING;
 
 /**
  * 用户信息表
@@ -38,7 +36,8 @@ public class User {
     /**
      * 用户类型
      */
-    private Integer userType;
+    @Enumerated(value = STRING)
+    private UserTypeEnum userType;
     /**
      * 用户邮箱
      */
@@ -54,19 +53,24 @@ public class User {
     /**
      * 用户状态
      */
-    private Integer status;
+    @Enumerated(value = STRING)
+    private UserStatusEnum status;
     /**
      * 用户是否删除
      */
-    private Integer delFlag;
+    @Enumerated(value = STRING)
+    private DelFlagEnum delFlag;
     /**
      * 用户性别
      */
-    @javax.persistence.Enumerated(value = javax.persistence.EnumType.STRING)
-    @javax.persistence.Column(name = "sex")
+    @Enumerated(value = STRING)
     private SexEnum sex;
 
     public User(SexEnum sex) {
         this.sex = sex;
+    }
+
+    public User(String username) {
+        this.username = username;
     }
 }

@@ -24,7 +24,7 @@ spring:
   jpa:
     generate-ddl: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
 eureka:
   client: #将客户端注册到 eureka 服务列表内

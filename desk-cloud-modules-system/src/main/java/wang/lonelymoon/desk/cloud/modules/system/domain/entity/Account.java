@@ -1,12 +1,11 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 
 import lombok.Data;
+import wang.lonelymoon.desk.cloud.common.enums.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
+import static javax.persistence.EnumType.STRING;
 
 /**
  * 账户表
@@ -27,7 +26,8 @@ public class Account {
     /**
      * 账户类型
      */
-    private Integer loginAccountType;
+    @Enumerated(value = STRING)
+    private LoginAccountTypeEnum loginAccountType;
 
     /**
      * 登录密码
