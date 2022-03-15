@@ -38,11 +38,13 @@ public class Account {
     /**
      * 账户来源 指该注册账户的源头
      */
-    private String loginAccountState;
+    @Enumerated(value = STRING)
+    private LoginAccountStateEnum loginAccountState;
 
     /**
      * 账户状态 指该账户目前的状态
      */
-    private Integer status;
+    @Enumerated(value = STRING)
+    private LoginAccountStatusEnum status;
 
 }

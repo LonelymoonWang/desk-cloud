@@ -1,9 +1,11 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 
 import lombok.*;
+import wang.lonelymoon.desk.cloud.common.enums.*;
 
 import javax.persistence.*;
 
+import static javax.persistence.EnumType.STRING;
 import static javax.persistence.GenerationType.*;
 
 /**
@@ -35,12 +37,9 @@ public class Role {
     /**
      * 状态
      */
-    private Integer status;
+    @Enumerated(value = STRING)
+    private CommonStatusEnum status;
 
-    /**
-     * 是否删除
-     */
-    private Integer delFlag;
 
     /**
      * 账户id，逗号隔开

@@ -5,6 +5,7 @@ import wang.lonelymoon.desk.cloud.common.enums.*;
 
 import javax.persistence.*;
 
+import static javax.persistence.EnumType.STRING;
 import static javax.persistence.GenerationType.IDENTITY;
 
 /**
@@ -56,16 +57,18 @@ public class Permission {
     /**
      * 菜单类型（目录、菜单、按钮）
      */
-    private Integer menuType;
+    @Enumerated(value = STRING)
+    private MenuTypeEnum menuType;
 
     /**
      * 菜单显示状态（显示、隐藏）
      */
-    private Integer visible;
+    private Boolean visible;
 
     /**
      * 菜单状态（正常、停用）
      */
+    @Enumerated(value = STRING)
     private CommonStatusEnum status;
 
     /**
@@ -78,10 +81,6 @@ public class Permission {
      */
     private String icon;
 
-    /**
-     * 是否删除
-     */
-    private DelFlagEnum delFlag;
 
     /**
      * 角色id，逗号隔开
