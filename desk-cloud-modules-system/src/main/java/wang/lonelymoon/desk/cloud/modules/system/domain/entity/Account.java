@@ -19,23 +19,30 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
     /**
      * 登录账户
      */
     private String loginAccount;
+    /**
+     * 登录密码
+     */
+    private String password;
 
     /**
-     * 账户类型
+     * 账户类型 指该账户具体能做什么
      */
     @Enumerated(value = STRING)
     private LoginAccountTypeEnum loginAccountType;
 
     /**
-     * 登录密码
+     * 账户来源 指该注册账户的源头
      */
-    private String password;
+    private String loginAccountState;
+
     /**
-     * 账户状态
+     * 账户状态 指该账户目前的状态
      */
     private Integer status;
+
 }

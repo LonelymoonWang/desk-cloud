@@ -25,6 +25,10 @@ public class User {
     @Column(nullable = false)
     private Long id;
     /**
+     * 账户id
+     */
+    private Long accountId;
+    /**
      * 用户名
      */
     private String username;
@@ -65,11 +69,14 @@ public class User {
     @Enumerated(value = STRING)
     private SexEnum sex;
 
-    public User(SexEnum sex) {
-        this.sex = sex;
-    }
+    /**
+     * 角色id列表，逗号隔开
+     */
+    private String roleIds;
 
-    public User(String username) {
-        this.username = username;
-    }
+    /**
+     * 角色组ids，逗号隔开
+     */
+    private String roleGroupIds;
+
 }

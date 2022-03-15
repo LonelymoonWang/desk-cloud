@@ -27,7 +27,11 @@ public class LoginApi implements BaseApi<LoginApiRequest, LoginApiResponse> {
     @Override
     @RequestMapping("login")
     public ResponseResult<LoginApiResponse> execute(LoginApiRequest loginApiRequest) {
-        LoginResponse response = loginService.execute(new LoginRequest(loginApiRequest.username(), loginApiRequest.password(), code(LoginAccountTypeEnum.class, loginApiRequest.loginAccountType())));
+        LoginResponse response = loginService.execute(new LoginRequest(
+                loginApiRequest.username()
+                , loginApiRequest.password()
+                , code(LoginAccountTypeEnum.class, loginApiRequest.loginAccountType())
+        ));
         return new ResponseResult<LoginApiResponse>().success(new LoginApiResponse(response.id()));
     }
 }
