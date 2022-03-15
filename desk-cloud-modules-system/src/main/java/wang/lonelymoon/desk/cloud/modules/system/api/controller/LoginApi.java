@@ -10,7 +10,8 @@ import wang.lonelymoon.desk.cloud.modules.system.manager.request.*;
 import wang.lonelymoon.desk.cloud.modules.system.manager.response.*;
 import wang.lonelymoon.desk.cloud.modules.system.manager.service.*;
 
-import static wang.lonelymoon.desk.cloud.common.util.EnumUtils.*;
+import static wang.lonelymoon.desk.cloud.common.util.EnumUtils.code;
+
 
 /**
  * @author lonelymoon
