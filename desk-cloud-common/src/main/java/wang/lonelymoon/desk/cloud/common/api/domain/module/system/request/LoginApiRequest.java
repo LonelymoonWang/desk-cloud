@@ -1,4 +1,4 @@
-package wang.lonelymoon.desk.cloud.modules.system.api.vo.request;
+package wang.lonelymoon.desk.cloud.common.api.domain.module.system.request;
 
 public record LoginApiRequest(
         String username,

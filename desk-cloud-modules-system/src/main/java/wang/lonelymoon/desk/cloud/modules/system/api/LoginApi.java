@@ -1,16 +1,16 @@
-package wang.lonelymoon.desk.cloud.modules.system.api.controller;
+package wang.lonelymoon.desk.cloud.modules.system.api;
 
 import org.springframework.web.bind.annotation.*;
 import wang.lonelymoon.desk.cloud.common.api.*;
+import wang.lonelymoon.desk.cloud.common.api.domain.module.system.request.*;
+import wang.lonelymoon.desk.cloud.common.api.domain.module.system.response.*;
 import wang.lonelymoon.desk.cloud.common.enums.*;
 import wang.lonelymoon.desk.cloud.common.result.*;
-import wang.lonelymoon.desk.cloud.modules.system.api.vo.request.*;
-import wang.lonelymoon.desk.cloud.modules.system.api.vo.response.*;
 import wang.lonelymoon.desk.cloud.modules.system.manager.request.*;
 import wang.lonelymoon.desk.cloud.modules.system.manager.response.*;
 import wang.lonelymoon.desk.cloud.modules.system.manager.service.*;
 
-import static wang.lonelymoon.desk.cloud.common.util.EnumUtils.code;
+import static wang.lonelymoon.desk.cloud.common.util.EnumUtils.*;
 
 
 /**
@@ -26,8 +26,8 @@ public class LoginApi implements BaseApi<LoginApiRequest, LoginApiResponse> {
     }
 
     @Override
-    @RequestMapping("login")
-    public ResponseResult<LoginApiResponse> execute(LoginApiRequest loginApiRequest) {
+    @PostMapping("login")
+    public ResponseResult<LoginApiResponse> execute(@RequestBody LoginApiRequest loginApiRequest) {
         LoginResponse response = loginService.execute(new LoginRequest(
                 loginApiRequest.username()
                 , loginApiRequest.password()
