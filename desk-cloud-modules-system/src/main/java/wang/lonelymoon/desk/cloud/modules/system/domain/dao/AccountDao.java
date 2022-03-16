@@ -1,6 +1,6 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.dao;
 
-import org.springframework.data.repository.*;
+import org.springframework.data.jpa.repository.*;
 import org.springframework.lang.*;
 import wang.lonelymoon.desk.cloud.common.enums.*;
 import wang.lonelymoon.desk.cloud.modules.system.domain.entity.*;
@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * @author lonelymoon
  */
-public interface AccountDao extends CrudRepository<Account, Long> {
+public interface AccountDao extends JpaRepository<Account, Long> {
     /**
      * 查询账户信息
      *

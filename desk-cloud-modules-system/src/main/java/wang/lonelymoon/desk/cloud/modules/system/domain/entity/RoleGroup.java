@@ -17,11 +17,11 @@ public class RoleGroup {
     @Column(name = "id", nullable = false)
     private Long id;
 
-   private String roleGroupName;
+    private String roleGroupName;
 
-   private Long orderNum;
+    private Long orderNum;
 
-   private String roleIds;
+    private String roleIds;
 
-   private String accountIds;
+    private String accountIds;
 }

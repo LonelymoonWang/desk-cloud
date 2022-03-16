@@ -5,7 +5,7 @@ import wang.lonelymoon.desk.cloud.common.enums.*;
 
 import javax.persistence.*;
 
-import static javax.persistence.EnumType.STRING;
+import static javax.persistence.EnumType.*;
 import static javax.persistence.GenerationType.*;
 
 /**

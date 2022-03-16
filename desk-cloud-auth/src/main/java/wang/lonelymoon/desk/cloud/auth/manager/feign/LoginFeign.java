@@ -18,6 +18,7 @@ import wang.lonelymoon.desk.cloud.common.result.*;
 public interface LoginFeign {
     /**
      * desk-cloud-modules-system login
+     *
      * @param loginApiRequest 登录请求
      * @return ResponseResult
      */

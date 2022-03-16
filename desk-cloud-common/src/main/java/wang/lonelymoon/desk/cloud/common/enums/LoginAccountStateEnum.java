@@ -2,13 +2,14 @@ package wang.lonelymoon.desk.cloud.common.enums;
 
 /**
  * 登录账户的来源
+ *
  * @author lonelymoon
  */
 public enum LoginAccountStateEnum {
     /**
      * SYSTEM 系统
      */
-    SYSTEM(1,"系统");
+    SYSTEM(1, "系统");
     private Integer code;
     private String desc;
 

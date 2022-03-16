@@ -1,7 +1,6 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 
 import lombok.*;
-import wang.lonelymoon.desk.cloud.common.enums.*;
 
 import javax.persistence.*;
 
