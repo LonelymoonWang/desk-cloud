@@ -25,4 +25,9 @@ public class LoginApi implements BaseApi<LoginApiRequest, LoginApiResponse> {
     public ResponseResult<LoginApiResponse> execute(@RequestBody LoginApiRequest loginApiRequest) {
         return loginFeign.execute(loginApiRequest);
     }
+
+    @GetMapping(value = "/oauth2/callback",headers = "")
+    public String callback(@RequestParam("code") String code) {
+        return code;
+    }
 }

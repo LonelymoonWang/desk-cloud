@@ -16,6 +16,13 @@ spring:
       discovery:
         enabled: true
         service-id: desk-cloud-config-server
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 3fe57cb8bfe38982081d
+            client-secret: 70d3e0b0249d4c2781953a5a1376050561b0d962
 eureka:
   client: #将客户端注册到 eureka 服务列表内
     service-url:

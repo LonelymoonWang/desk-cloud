@@ -11,6 +11,7 @@ import org.springframework.cloud.openfeign.*;
  */
 @SpringBootApplication
 @EnableFeignClients
+//@EnableOAuth2Client
 public class DeskCloudAuthApplication {
 
     public static void main(String[] args) {
