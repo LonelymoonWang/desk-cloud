@@ -12,10 +12,10 @@ import org.springframework.cloud.openfeign.*;
 @SpringBootApplication
 @EnableFeignClients
 //@EnableOAuth2Client
-public class DeskCloudAuthApplication {
+public class DeskCloudAuthServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DeskCloudAuthApplication.class, args);
+        SpringApplication.run(DeskCloudAuthServerApplication.class, args);
     }
 
 }

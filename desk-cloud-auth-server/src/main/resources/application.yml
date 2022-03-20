@@ -5,7 +5,7 @@ spring:
   config:
     import: "optional:configserver:http://desk-cloud-config-server"
   application:
-    name: desk-cloud-auth #服务名
+    name: desk-cloud-auth-server #服务名
   cloud:
     config:
       label: master #分支名称
@@ -16,13 +16,6 @@ spring:
       discovery:
         enabled: true
         service-id: desk-cloud-config-server
-  security:
-    oauth2:
-      client:
-        registration:
-          github:
-            client-id: 3fe57cb8bfe38982081d
-            client-secret: 70d3e0b0249d4c2781953a5a1376050561b0d962
 eureka:
   client: #将客户端注册到 eureka 服务列表内
     service-url:

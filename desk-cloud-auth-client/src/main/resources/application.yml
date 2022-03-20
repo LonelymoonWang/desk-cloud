@@ -1,0 +1,57 @@
+server:
+  port: 8080
+spring:
+  config:
+    import: "optional:configserver:http://desk-cloud-config-server"
+  application:
+    name: desk-cloud-auth-client #服务名
+  cloud:
+    config:
+      label: master #分支名称
+      name: ${spring.application.name}  #配置文件名称，desk-cloud-gateway-dev.yml 中的 config
+      profile: dev  #环境名  desk-cloud-gateway-dev.yml 中的 dev
+      #这里不要忘记添加 http:// 否则无法读取
+      uri: http://desk-cloud-config-server #Spring Cloud Config 服务端（配置中心）地址
+      discovery:
+        enabled: true
+        service-id: desk-cloud-config-server
+  security:
+    oauth2:
+      client:
+        registration:
+          login-client:
+            provider: spring
+            client-id: login-client
+            client-secret: openid-connect
+            client-authentication-method: client_secret_basic
+            authorization-grant-type: authorization_code
+            redirect-uri: http://127.0.0.1:8080/login/oauth2/code/login-client
+            scope: openid,profile
+            client-name: Spring
+          google:
+            client-id: your-app-client-id
+            client-secret: your-app-client-secret
+          github:
+            client-id: 3fe57cb8bfe38982081d
+            client-secret: 70d3e0b0249d4c2781953a5a1376050561b0d962
+          facebook:
+            client-id: your-app-client-id
+            client-secret: your-app-client-secret
+          okta:
+            client-id: your-app-client-id
+            client-secret: your-app-client-secret
+        provider:
+          spring:
+            authorization-uri: http://localhost:8003/oauth2/authorize
+            token-uri: http://localhost:8003/oauth2/token
+            jwk-set-uri: http://localhost:8003/oauth2/jwks
+          okta:
+            authorization-uri: https://your-subdomain.oktapreview.com/oauth2/v1/authorize
+            token-uri: https://your-subdomain.oktapreview.com/oauth2/v1/token
+            user-info-uri: https://your-subdomain.oktapreview.com/oauth2/v1/userinfo
+            jwk-set-uri: https://your-subdomain.oktapreview.com/oauth2/v1/keys
+eureka:
+  client: #将客户端注册到 eureka 服务列表内
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+    fetch-registry: true  #服务消费者客户端需要去检索服务

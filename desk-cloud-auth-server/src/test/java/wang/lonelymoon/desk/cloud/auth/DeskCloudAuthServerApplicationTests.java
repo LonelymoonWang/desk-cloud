@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.*;
 
 @SpringBootTest
-class DeskCloudAuthApplicationTests {
+class DeskCloudAuthServerApplicationTests {
 
     @Test
     void contextLoads() {

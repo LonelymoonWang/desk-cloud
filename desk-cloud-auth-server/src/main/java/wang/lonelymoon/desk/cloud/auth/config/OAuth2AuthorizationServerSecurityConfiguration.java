@@ -94,7 +94,7 @@ public class OAuth2AuthorizationServerSecurityConfiguration {
 
     @Bean
     public ProviderSettings providerSettings() {
-        return ProviderSettings.builder().issuer("http://localhost:9000").build();
+        return ProviderSettings.builder().issuer("http://localhost:8003").build();
     }
 
     @Bean
