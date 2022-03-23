@@ -1,11 +1,11 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.dao;
 
-import org.springframework.data.jpa.repository.*;
-import org.springframework.lang.*;
-import wang.lonelymoon.desk.cloud.common.enums.*;
-import wang.lonelymoon.desk.cloud.modules.system.domain.entity.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.lang.NonNull;
+import wang.lonelymoon.desk.cloud.common.enums.LoginAccountTypeEnum;
+import wang.lonelymoon.desk.cloud.modules.system.domain.entity.Account;
 
-import java.util.*;
+import java.util.Optional;
 
 /**
  * @author lonelymoon

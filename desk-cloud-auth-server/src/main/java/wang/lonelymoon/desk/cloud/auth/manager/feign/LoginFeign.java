@@ -1,11 +1,11 @@
 package wang.lonelymoon.desk.cloud.auth.manager.feign;
 
-import org.springframework.cloud.openfeign.*;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
-import wang.lonelymoon.desk.cloud.common.api.domain.module.system.request.*;
-import wang.lonelymoon.desk.cloud.common.api.domain.module.system.response.*;
-import wang.lonelymoon.desk.cloud.common.result.*;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PostMapping;
+import wang.lonelymoon.desk.cloud.common.api.domain.module.system.request.LoginApiRequest;
+import wang.lonelymoon.desk.cloud.common.api.domain.module.system.response.LoginApiResponse;
+import wang.lonelymoon.desk.cloud.common.result.ResponseResult;
 
 /**
  * Component 添加为容器内的一个组件

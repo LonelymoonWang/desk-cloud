@@ -1,9 +1,9 @@
 package wang.lonelymoon.desk.cloud.gateway;
 
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.cloud.netflix.eureka.*;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-import static org.springframework.boot.SpringApplication.*;
+import static org.springframework.boot.SpringApplication.run;
 
 /**
  * @author lonelymoon

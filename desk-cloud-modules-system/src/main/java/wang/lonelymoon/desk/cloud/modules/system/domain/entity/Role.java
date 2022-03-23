@@ -1,12 +1,16 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 
-import lombok.*;
-import wang.lonelymoon.desk.cloud.common.enums.*;
+import lombok.Data;
+import wang.lonelymoon.desk.cloud.common.enums.CommonStatusEnum;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-import static javax.persistence.EnumType.*;
-import static javax.persistence.GenerationType.*;
+import static javax.persistence.EnumType.STRING;
+import static javax.persistence.GenerationType.IDENTITY;
 
 /**
  * @author lonelymoon

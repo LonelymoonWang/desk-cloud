@@ -1,10 +1,13 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 
-import lombok.*;
+import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-import static javax.persistence.GenerationType.*;
+import static javax.persistence.GenerationType.IDENTITY;
 
 /**
  * @author lonelymoon

@@ -1,16 +1,18 @@
 package wang.lonelymoon.desk.cloud.modules.system.api;
 
-import org.springframework.web.bind.annotation.*;
-import wang.lonelymoon.desk.cloud.common.api.*;
-import wang.lonelymoon.desk.cloud.common.api.domain.module.system.request.*;
-import wang.lonelymoon.desk.cloud.common.api.domain.module.system.response.*;
-import wang.lonelymoon.desk.cloud.common.enums.*;
-import wang.lonelymoon.desk.cloud.common.result.*;
-import wang.lonelymoon.desk.cloud.modules.system.manager.request.*;
-import wang.lonelymoon.desk.cloud.modules.system.manager.response.*;
-import wang.lonelymoon.desk.cloud.modules.system.manager.service.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import wang.lonelymoon.desk.cloud.common.api.BaseApi;
+import wang.lonelymoon.desk.cloud.common.api.domain.module.system.request.LoginApiRequest;
+import wang.lonelymoon.desk.cloud.common.api.domain.module.system.response.LoginApiResponse;
+import wang.lonelymoon.desk.cloud.common.enums.LoginAccountTypeEnum;
+import wang.lonelymoon.desk.cloud.common.result.ResponseResult;
+import wang.lonelymoon.desk.cloud.modules.system.manager.request.LoginRequest;
+import wang.lonelymoon.desk.cloud.modules.system.manager.response.LoginResponse;
+import wang.lonelymoon.desk.cloud.modules.system.manager.service.LoginServiceImpl;
 
-import static wang.lonelymoon.desk.cloud.common.util.EnumUtils.*;
+import static wang.lonelymoon.desk.cloud.common.util.EnumUtils.code;
 
 
 /**

@@ -1,8 +1,8 @@
 package wang.lonelymoon.desk.cloud.auth;
 
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.cloud.openfeign.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * //开启 OpenFeign 功能

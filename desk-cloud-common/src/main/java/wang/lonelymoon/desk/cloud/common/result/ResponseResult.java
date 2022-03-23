@@ -1,6 +1,6 @@
 package wang.lonelymoon.desk.cloud.common.result;
 
-import java.util.*;
+import java.util.HashMap;
 
 /**
  * @author lonelymoon

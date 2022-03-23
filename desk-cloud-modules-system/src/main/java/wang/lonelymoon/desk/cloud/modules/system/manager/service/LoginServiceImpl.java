@@ -1,13 +1,13 @@
 package wang.lonelymoon.desk.cloud.modules.system.manager.service;
 
-import org.springframework.stereotype.*;
-import wang.lonelymoon.desk.cloud.common.service.*;
-import wang.lonelymoon.desk.cloud.modules.system.domain.dao.*;
-import wang.lonelymoon.desk.cloud.modules.system.domain.entity.*;
-import wang.lonelymoon.desk.cloud.modules.system.manager.request.*;
-import wang.lonelymoon.desk.cloud.modules.system.manager.response.*;
+import org.springframework.stereotype.Service;
+import wang.lonelymoon.desk.cloud.common.service.BaseService;
+import wang.lonelymoon.desk.cloud.modules.system.domain.dao.AccountDao;
+import wang.lonelymoon.desk.cloud.modules.system.domain.entity.Account;
+import wang.lonelymoon.desk.cloud.modules.system.manager.request.LoginRequest;
+import wang.lonelymoon.desk.cloud.modules.system.manager.response.LoginResponse;
 
-import java.util.*;
+import java.util.Optional;
 
 /**
  * @author lonelymoon

@@ -1,6 +1,6 @@
 package wang.lonelymoon.desk.cloud.common.api;
 
-import wang.lonelymoon.desk.cloud.common.result.*;
+import wang.lonelymoon.desk.cloud.common.result.ResponseResult;
 
 /**
  * @author lonelymoon

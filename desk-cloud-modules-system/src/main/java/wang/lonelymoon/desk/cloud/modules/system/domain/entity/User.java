@@ -1,11 +1,21 @@
 package wang.lonelymoon.desk.cloud.modules.system.domain.entity;
 
-import lombok.*;
-import wang.lonelymoon.desk.cloud.common.enums.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import wang.lonelymoon.desk.cloud.common.enums.DelFlagEnum;
+import wang.lonelymoon.desk.cloud.common.enums.SexEnum;
+import wang.lonelymoon.desk.cloud.common.enums.UserStatusEnum;
+import wang.lonelymoon.desk.cloud.common.enums.UserTypeEnum;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import static javax.persistence.EnumType.*;
+import static javax.persistence.EnumType.STRING;
 
 /**
  * 用户信息表

@@ -1,6 +1,6 @@
 package wang.lonelymoon.desk.cloud.auth.test;
 
-import org.springframework.security.crypto.bcrypt.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class GenPassword {
     public static void main(String[] args) {

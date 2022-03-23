@@ -1,7 +1,7 @@
 package wang.lonelymoon.desk.cloud.auth.test;
 
-import com.fasterxml.jackson.databind.*;
-import org.springframework.web.bind.annotation.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class OAuth2AuthorizationServerApplicationIController {

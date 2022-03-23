@@ -1,7 +1,7 @@
 package wang.lonelymoon.desk.cloud.eureka.server;
 
-import org.junit.jupiter.api.*;
-import org.springframework.boot.test.context.*;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class DeskCloudEurekaServerApplicationTests {

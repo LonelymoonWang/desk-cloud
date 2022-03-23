@@ -1,23 +1,18 @@
 package wang.lonelymoon.desk.cloud.common.enums;
 
-/**
- * 登录账号类型
- *
- * @author lonelymoon
- */
-public enum LoginAccountTypeEnum {
+public enum RegistryTypeEnum {
     /**
-     * ADMIN 管理员 NORMAL 普通用户
+     * PASSWORD 密码 EMAIL 邮箱 MOBILE 手机号
      */
-    ADMIN(1, "管理员"), NORMAL(2, "普通用户");
+    PASSWORD(1, "密码"), EMAIL(2, "邮箱"), MOBILE(3, "手机号");
 
     private Integer code;
     private String desc;
 
-    LoginAccountTypeEnum() {
+    RegistryTypeEnum() {
     }
 
-    LoginAccountTypeEnum(Integer code, String desc) {
+    RegistryTypeEnum(Integer code, String desc) {
         this.code = code;
         this.desc = desc;
     }
@@ -40,6 +35,9 @@ public enum LoginAccountTypeEnum {
 
     @Override
     public String toString() {
-        return "LoginAccountTypeEnum{" + "code=" + code + ", desc='" + desc + '\'' + '}';
+        return "LoginAccountTypeEnum{" +
+                "code=" + code +
+                ", desc='" + desc + '\'' +
+                '}';
     }
 }
